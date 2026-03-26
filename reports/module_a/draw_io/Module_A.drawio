@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1" pages="3">
   <diagram name="Страница-1" id="2-9H7tkWX6Nq4hJc-a6U">
-    <mxGraphModel dx="5356" dy="2584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2075" dy="1122" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="JQlYaAicNKCnhFr2Nyui-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="video_id: String" vertex="1">
           <mxGeometry height="30" width="250" x="-540" y="-10" as="geometry" />
         </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="camera_id: String" vertex="1">
+        <mxCell id="JQlYaAicNKCnhFr2Nyui-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="camera_id: UInt32" vertex="1">
           <mxGeometry height="30" width="250" x="-540" y="-50" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="title: String" vertex="1">
@@ -113,7 +113,7 @@
         <mxCell id="JQlYaAicNKCnhFr2Nyui-46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="video_id: String" vertex="1">
           <mxGeometry height="30" width="250" x="240" y="-20" as="geometry" />
         </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="camera_id: String" vertex="1">
+        <mxCell id="JQlYaAicNKCnhFr2Nyui-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="camera_id: UInt32" vertex="1">
           <mxGeometry height="30" width="250" x="240" y="-60" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="title: String" vertex="1">
@@ -130,9 +130,6 @@
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;text-align: left;&quot;&gt;start_time&lt;/span&gt;: DateTime64(3)" vertex="1">
           <mxGeometry height="30" width="250" x="240" y="230" as="geometry" />
-        </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="tracker_id: UInt32" vertex="1">
-          <mxGeometry height="30" width="250" x="240" y="190" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-54" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;text-align: left;&quot;&gt;end_time&lt;/span&gt;: DateTime64(3)" vertex="1">
           <mxGeometry height="30" width="250" x="240" y="270" as="geometry" />
@@ -188,7 +185,7 @@
         <mxCell id="JQlYaAicNKCnhFr2Nyui-87" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;text-align: left;&quot;&gt;avg_speed_kmh&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;: Float32&lt;/span&gt;" vertex="1">
           <mxGeometry height="30" width="250" x="863.78" y="244.29999999999998" as="geometry" />
         </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-89" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;text-align: left;&quot;&gt;direction:&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;String&lt;/span&gt;" vertex="1">
+        <mxCell id="JQlYaAicNKCnhFr2Nyui-89" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;text-align: left;&quot;&gt;direction:&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;Float32&lt;/span&gt;" vertex="1">
           <mxGeometry height="30" width="250" x="863.78" y="644.3000000000001" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-90" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;total_vehicles: UInt32&lt;/span&gt;&lt;/div&gt;" vertex="1">
@@ -299,9 +296,6 @@
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-128" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Every hour from realtime_traffic" vertex="1">
           <mxGeometry height="60" width="120" x="1570" y="-155" as="geometry" />
-        </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-131" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;is_peak_hour: UInt8&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="250" x="863.78" y="604.3000000000001" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-151" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&amp;nbsp; " vertex="1">
           <mxGeometry height="750" width="290" x="1790" y="-90" as="geometry" />
@@ -415,7 +409,7 @@
           <mxGeometry height="30" width="250" x="865" y="1190" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-224" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&amp;nbsp; " vertex="1">
-          <mxGeometry height="760" width="290" x="1350" y="780" as="geometry" />
+          <mxGeometry height="650" width="290" x="1350" y="780" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-225" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="video_id: String" vertex="1">
           <mxGeometry height="30" width="250" x="1370" y="840" as="geometry" />
@@ -430,13 +424,10 @@
           <mxGeometry height="30" width="250" x="1370" y="960" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-231" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;text-align: left;&quot;&gt;direction:&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;String&lt;/span&gt;" vertex="1">
-          <mxGeometry height="30" width="250" x="1370" y="1490" as="geometry" />
+          <mxGeometry height="30" width="250" x="1370" y="1380" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-232" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;total_vehicles: UInt32&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="250" x="1370" y="1000" as="geometry" />
-        </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-236" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;is_holiday: UInt8&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="250" x="1370" y="1450" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-249" edge="1" parent="1" source="JQlYaAicNKCnhFr2Nyui-237" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JQlYaAicNKCnhFr2Nyui-242">
           <mxGeometry relative="1" as="geometry" />
@@ -446,12 +437,6 @@
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-239" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="predicted_at: DateTime" vertex="1">
           <mxGeometry height="30" width="250" x="1370" y="880" as="geometry" />
-        </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-240" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;is_peak_hour: UInt8&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="250" x="1370" y="1410" as="geometry" />
-        </mxCell>
-        <mxCell id="JQlYaAicNKCnhFr2Nyui-241" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;is_overdrawing: UInt8&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="250" x="1370" y="1370" as="geometry" />
         </mxCell>
         <mxCell id="JQlYaAicNKCnhFr2Nyui-242" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Every 120 mins from hourly_traffic, systemic_apperances" vertex="1">
           <mxGeometry height="60" width="180" x="1720" y="710" as="geometry" />
