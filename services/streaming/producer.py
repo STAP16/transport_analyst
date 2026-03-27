@@ -25,12 +25,13 @@ producer = Producer(config)
 results = model.track(source="fallback2.mp4" ,stream=True)
 
 def create_message(obj, path_in_minio):
+	PX_PER_METER = 10
 	
 	vehicle_type = TARGET_CLASSES[int(obj.cls)]
 	track_id = int(obj.id)
 	x1, y1, x2, y2 = obj.xyxy[0].tolist()
-	x_cord_m = (x1 + x2) / 2
-	y_cord_m = (y1 + y2) / 2
+	x_cord_m = ((x1 + x2) / 2) / PX_PER_METER
+	y_cord_m = ((y1 + y2) / 2) / PX_PER_METER
 	width = WIDTH
 	length = LENGTH
 	path = path_in_minio

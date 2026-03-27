@@ -2,6 +2,8 @@ def transform_raw_csv_to_staging():
 
 	import numpy as np
 	from database.client import get_client
+	from services.batch.utils import calculate_speed
+
 
 	client = get_client()
 	DEFAULT_DIRECTION = "north"
@@ -20,17 +22,6 @@ def transform_raw_csv_to_staging():
 			case _:
 				return type
 
-	def calculate_speed(first_track_point, last_track_point):
-		dist = np.sqrt(
-			(last_track_point["x_cord_m"] - first_track_point["x_cord_m"])**2 +
-			(last_track_point["y_cord_m"] - first_track_point["y_cord_m"])**2
-		)
-
-		time_diff = (last_track_point["detection_time"] - first_track_point["detection_time"]).dt.total_seconds()
-
-		speed_km_h = (dist/time_diff) * 3.6
-		total_kms = dist / 1000
-		return speed_km_h, total_kms
 
 	df = client.query_df(query)
 	df["object_type"] = df["object_type"].apply(clean_object_type)

@@ -1,4 +1,4 @@
-def transfrom_staging_to_mart():
+def build_hourly_traffic():
 	from database.client import get_client
 	client = get_client()
 
@@ -46,6 +46,6 @@ def transfrom_staging_to_mart():
 	"""
 
 	client.command(query)
-	print("Вставка прошла успешно.")
+	print("Hourly traffic has been inserted")
 
-transfrom_staging_to_mart()
+build_hourly_traffic()
