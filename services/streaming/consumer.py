@@ -66,7 +66,7 @@ try:
 
 		print("len batch", len(batch))
 		batch.append(json.loads(msg.value()))	
-		if len(batch) >=INSERT_CONST:
+		if len(batch) >= INSERT_CONST:
 			insert_message_to_raw_layer(batch)
 			print("Вставка в таблицу")
 			last_insert_time = time.time()
