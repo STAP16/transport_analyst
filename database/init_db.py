@@ -15,6 +15,7 @@ def init_db():
 
 	#-- raw_layer
 	raw.create_raw_detections_table()
+	raw.create_csv_traffic_raw()
 	#-- staging_layer
 	staging.create_detections_clean_table()
 	#-- mart_layer

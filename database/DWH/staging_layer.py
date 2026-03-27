@@ -8,11 +8,11 @@ def create_detections_clean_table():
 		camera_id UInt32,
 		video_id UInt32,
 		title String,
-		recording_at DateTime,
-		recording_end DateTime,
+		recording_at Nullable(DateTime64(6)),
+		recording_end Nullable(DateTime64(6)),
 		track_id UInt32,
-		start_time DateTime64(3),
-		end_time DateTime64(3),
+		start_time DateTime64(6),
+		end_time Nullable(DateTime64(6)),
 		object_type String,
 		width Float32,
 		length Float32,
@@ -21,11 +21,10 @@ def create_detections_clean_table():
 		y_cord_m Float32,
 		total_kms Float32,
 		speed_km_h Float32,
-		direction Float32
+		direction String
 	)	
 	ENGINE = MergeTree
 	ORDER BY (camera_id, detection_time)
 	PARTITION BY toYYYYMM(detection_time)
-
 	"""
 	client.command(query)

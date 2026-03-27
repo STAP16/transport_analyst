@@ -20,7 +20,7 @@ def create_realtime_traffic():
 		bicycle_count UInt32,
 		motorcycle_count UInt32,
 		is_holiday UInt8,
-		direction Float32
+		direction String
 	)	
 	ENGINE = MergeTree
 	ORDER BY (camera_id, timestamp)
@@ -48,7 +48,7 @@ def create_hourly_traffic():
 		motorcycle_count UInt32,
 		is_holiday UInt8,
 		is_peak_hour UInt8,
-		direction Float32
+		direction String
 	)	
 	ENGINE = MergeTree
 	ORDER BY (camera_id, hour)
@@ -74,7 +74,7 @@ def create_system_apperances():
 		is_overdrawing UInt8,
 		is_holiday UInt8,
 		is_peak_hour UInt8,
-		direction Float32
+		direction String
 	)	
 	ENGINE = MergeTree
 	ORDER BY (camera_id, timestamp)
@@ -96,7 +96,7 @@ def create_proximity_events():
 		second_vehicle_type String,
 		distanse_m Float32,
 		is_danger_proximity UInt8,
-		direction Float32
+		direction String
 	)	
 	ENGINE = MergeTree
 	ORDER BY (camera_id, timestamp)
@@ -125,7 +125,7 @@ def create_dispatcher_predictions():
 		is_peak_hour UInt8,
 		recomendation String,
 		expected_result String,
-		direction Float32
+		direction String
 	)	
 	ENGINE = MergeTree
 	ORDER BY (camera_id, predicted_at)
