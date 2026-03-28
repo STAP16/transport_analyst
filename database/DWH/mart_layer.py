@@ -133,3 +133,4 @@ def create_dispatcher_predictions():
 
 	"""
 	client.command(query)	
+

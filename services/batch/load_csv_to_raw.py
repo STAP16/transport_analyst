@@ -53,5 +53,5 @@ def load_csv_to_raw(csv_path: str):
 	print(f"Загружено {len(df)} строк в raw_layer.csv_traffic_raw")
 
 
-path = r'C:\IT\NEVA projects\transport_analyst_p3\full_tracking_data.csv'
+path = r'C:\IT\NEVA projects\transport_analyst_p3\historic_data\full_tracking_data_historical.csv'
 load_csv_to_raw(path)

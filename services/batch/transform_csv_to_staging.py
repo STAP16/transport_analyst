@@ -2,7 +2,7 @@ def transform_raw_csv_to_staging():
 
 	import numpy as np
 	from database.client import get_client
-	from services.batch.utils import calculate_speed
+	from services.batch.utils.calculate_speed import calculate_speed
 
 
 	client = get_client()
