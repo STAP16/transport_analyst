@@ -1,8 +1,6 @@
 def explore_data():
 	'''Подготовка данных к обучению деревьев бустинга'''
-
-	from database.client import get_client
-
+	
 	import pandas as pd
 
 	df = pd.read_csv(r'historic_data\traffic_full_30min_historical.csv', parse_dates=['timestamp'])
