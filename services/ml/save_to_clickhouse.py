@@ -3,18 +3,16 @@ def save_to_clickhouse(recent):
 	import numpy as np
 	import pandas as pd
 	
-
-
 	client = get_client()
-
-	# Собираем DataFrame под структуру таблицы
+	#Собираем все данные из recent в dataframe
+	
 	result = pd.DataFrame({
-		'camera_id': 1,  # пока одна камера, потом можно расширить
-		'video_id': 1,
-		'predicted_at': recent['timestamp'],
+		"camera_id": 1,
+		"video_id": 1,
+		'predicted_at': recent["timestamp"],
 		'width': 0.0,
 		'length': 0.0,
-		'total_vehicles': recent['intensity_30min'].astype('uint32'),
+		'total_vehicles': recent["intensity_30min"].astype('uint32') ,
 		'avg_speed_kmh30': recent['avg_speed_kmh30'].astype('float32'),
 		'avg_speed_kmh60': recent['avg_speed_kmh60'].astype('float32'),
 		'avg_speed_kmh120': recent['avg_speed_kmh120'].astype('float32'),
@@ -23,11 +21,11 @@ def save_to_clickhouse(recent):
 		'is_traffic_jam120': recent['is_traffic_jam120'].astype('uint8'),
 		'is_overdrawing': np.uint8(0),
 		'is_holiday': np.uint8(0),
-		'is_peak_hour': recent['is_peak_hour'].astype('uint8') if 'is_peak_hour' in recent.columns else np.uint8(0),
-		'recomendation': 'Ситуация стабильная',  # пока заглушка
-		'expected_result': 'Без изменений',
-		'direction': 'all',
+		'is_peak_hour': recent["is_peak_hour"].astype('uint8') if "is_peak_hour" in recent.columns else np.uint8(0),
+		'recomendation': "Без рекомендации",
+		'expected_result': "Стабильно",
+		'direction': "all",
 	})
 
-	client.insert_df('mart_layer.dispatcher_predictions', result)
-	print(f"✅ Inserted {len(result)} into dispatcher_predictions")
+	client.insert_df("mart_layer.dispatcher_predictions", result)
+	print("✔️ Successful inserted predictions to dispatcher_predictions ")
