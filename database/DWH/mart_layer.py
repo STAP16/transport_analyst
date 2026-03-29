@@ -57,33 +57,6 @@ def create_hourly_traffic():
 	"""
 	client.command(query)
 
-def create_system_apperances():
-	query = """
-	CREATE TABLE IF NOT EXISTS mart_layer.system_apperances (
-		camera_id UInt32,
-		video_id UInt32,
-		timestamp DateTime,
-		title String,
-		width Float32,
-		length Float32,
-		total_vehicles UInt32,
-		avg_speed_kmh Float32,
-		car_count UInt32,
-		bus_count UInt32,
-		truck_count UInt32,
-		is_overdrawing UInt8,
-		is_holiday UInt8,
-		is_peak_hour UInt8,
-		direction String
-	)	
-	ENGINE = MergeTree
-	ORDER BY (camera_id, timestamp)
-	PARTITION BY toYYYYMM(timestamp)
-
-	"""
-	client.command(query)	
-
-
 def create_proximity_events():
 	query = """
 	CREATE TABLE IF NOT EXISTS mart_layer.system_apperances (

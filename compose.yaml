@@ -61,6 +61,10 @@ services:
       - "3000:3000"
     depends_on:
       - clickhouse
+    volumes:
+      - metabase_data:/metabase-data
+      
 volumes:
   clickhouse_data:
   minio_data:
+  metabase_data:
